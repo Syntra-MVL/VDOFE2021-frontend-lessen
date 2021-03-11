@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Intro Vue.js</title>
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <label
+          ><input type="checkbox" v-model="isFriendly" /> Are you
+          friendly?</label
+        >
+      </div>
+      <div>
+        <label>
+          Friendly message:
+          <input type="text" v-model="friendlyMessage" />
+        </label>
+      </div>
+      <div>
+        <label>
+          Unfriendly message:
+          <input type="text" v-model="unfriendlyMessage" />
+        </label>
+      </div>
+
+      <p v-if="isFriendly" :title="title">{{ friendlyMessage }}</p>
+      <p v-else>{{ unfriendlyMessage }}</p>
+
+      <ul>
+        <li v-for="foodItem in foodItems">{{ foodItem }}</li>
+      </ul>
+
+      <h1>Click Count: {{ clickCount }}</h1>
+
+      <button @click="increaseClickCount">Click me</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
