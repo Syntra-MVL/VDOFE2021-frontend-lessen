@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Intro Vue.js</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <label>
+        Message:
+        <input type="text" v-model="message" />
+      </label>
+
+      <p>{{message}}</p>
+      <p>{{reversedMessage}}</p>
+
+      <div>
+        <button @click="changeFilter('all')">Show all</button>
+        <button @click="changeFilter('even')">Show even</button>
+        <button @click="changeFilter('uneven')">Show uneven</button>
+      </div>
+
+      <div>
+        <p v-for="n in filteredNumbers">{{n}}</p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
