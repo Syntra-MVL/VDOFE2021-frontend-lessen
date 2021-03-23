@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Vue Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="display">
+        <div class="line-one">
+          {{lineOne}}
+          <span class="selected-operator">{{selectedOperator}}</span>
+        </div>
+        <div class="line-two">{{lineTwo}}</div>
+      </div>
+      <div class="operators">
+        <button
+          class="operators__btn"
+          v-for="operator in operators"
+          @click="operatorClick(operator)"
+        >
+          {{ operator }}
+        </button>
+      </div>
+      <div class="numbers">
+        <button class="numbers__btn" v-for="number in 10" @click="numberClick">
+          {{ number === 10 ? 0 : number }}
+        </button>
+        <button class="clear__btn" @click="clear">CE</button>
+        <button class="equal__btn" @click="calculate">=</button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

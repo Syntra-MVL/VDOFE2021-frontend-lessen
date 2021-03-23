@@ -1,0 +1,56 @@
+.display {
+  width: 280px;
+  height: 80px;
+  background-color: white;
+  margin: 2rem auto;
+  border-radius: 5px;
+  color: black;
+  font-family: monospace;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.line-one,
+.line-two {
+  height: 40px;
+  line-height: 40px;
+  text-align: right;
+  font-size: 20px;
+}
+
+.operators {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(2, 40px);
+  justify-content: center;
+  gap: 10px 20px;
+}
+
+.numbers {
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(4, 80px);
+  justify-content: center;
+  grid-auto-flow: dense;
+  gap: 20px;
+}
+
+.numbers__btn,
+.operators__btn,
+.clear__btn,
+.equal__btn {
+  display: block;
+  margin: 0;
+}
+
+.numbers__btn:nth-last-child(3) {
+  grid-column: 2 / span 1;
+}
+
+.clear__btn {
+  grid-column: 1 / span 1;
+}
+.equal__btn {
+  grid-column: 3 / span 1;
+}
