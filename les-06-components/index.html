@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Components</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <count-btn :count="countOne" @count-up="upCount(1)"></count-btn>
+      <count-btn :count="countTwo" @count-up="upCount(2)"></count-btn>
+      <count-btn :count="countThree" @count-up="upCount(3)"></count-btn>
+      <h1>Total clicks: {{countOne + countTwo + countThree}}</h1>
+      <hello-you some-message="Korneel" other-message="Lisa"></hello-you>
+      <hello-you some-message="everybody"></hello-you>
+      <hello-you :some-message="message" other-message="also"></hello-you>
+      <banner color="green" :round="true">
+        <p>test 123</p>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
+      </banner>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
