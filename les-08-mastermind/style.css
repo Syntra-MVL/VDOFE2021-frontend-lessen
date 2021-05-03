@@ -1,0 +1,67 @@
+body {
+    font-family: sans-serif;
+}
+
+body main {
+    width: 35rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.result-row,
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0;
+}
+.result-row span {
+    width: 3rem;
+    text-align: center;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid black;
+    margin-right: 0.5rem;
+}
+
+.result-row.hide span {
+    background-color: black;
+}
+
+.select-btn {
+    box-sizing: content-box;
+    width: 3rem;
+    text-align: center;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid black;
+    margin-right: 0.5rem;
+}
+
+#history-container {
+    min-height: 5rem;
+}
+
+.history-item {
+    border: 1px solid black;
+    margin-bottom: 1rem;
+}
+
+.history-item:last-child {
+    margin-bottom: 0;
+}
+
+#guess-input {
+    min-height: 2rem;
+}
+
+.do-not-show {
+    display: none !important;
+}
+
+#restart-btn-container {
+    padding-top: 1rem;
+}
